@@ -17,7 +17,7 @@ describe "Authentication" do
     describe "with invalid information" do
       before { click_button "サインイン" }
 
-      it { should have_selector('h5', text: 'サインイン') }
+      it { should have_selector('input', content: 'サインイン') }
       it { should have_selector('div.alert.alert-error', text: 'Invalid') }
     end
   end
